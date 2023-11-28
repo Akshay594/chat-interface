@@ -52,6 +52,7 @@ function App() {
         onLanguageChange={setUser1Language}
         preferredLanguage={user1Language}
         title="User 1"
+        userClass="user1"
       />
       <ChatBox 
         messages={user2Messages} 
@@ -59,6 +60,7 @@ function App() {
         onLanguageChange={setUser2Language}
         preferredLanguage={user2Language}
         title="User 2"
+        userClass="user2"
       />
     </div>
   );
