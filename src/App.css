@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  height: 90vh;
+  background-color: #f0f2f5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chat-box {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 0 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 30%;
+  animation: slideIn 0.5s ease;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes slideIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.chat-box h2 {
+  background-color: #007bff;
+  color: white;
+  margin: 0;
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.messages {
+  height: 70%;
+  overflow-y: auto;
+  padding: 15px;
+  background: #fafafa;
+}
+
+.messages p {
+  background: #e0e0e0;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 8px 0;
+  max-width: 75%;
+  word-wrap: break-word;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.input-area {
+  padding: 10px;
+  display: flex;
+  border-top: 1px solid #eee;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-right: 10px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+select {
+  margin-bottom: 10px;
+  padding: 7px 10px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+select:focus {
+  border-color: #007bff;
 }
