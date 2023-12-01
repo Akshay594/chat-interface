@@ -18,7 +18,12 @@ function ChatBox({ messages, onSendMessage, onLanguageChange, preferredLanguage,
         <option value="ta">Tamil</option>
         <option value="es">Spanish</option>
         <option value="fr">French</option>
-      </select>
+        <option value="de">German</option>
+        {/* Chinese simplified and traditional */}
+        <option value="zh-cn">Chinese (simplified)</option>
+        <option value="zh-tw">Chinese (traditional)</option>
+
+        </select>
       <div className="messages">
         {messages.map((msg, idx) => (
           <p key={idx} className={`message ${userClass}`}>{msg}</p>
